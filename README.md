@@ -1,25 +1,24 @@
-# Industrial Monitoring QA Automation
+# Industrial Monitoring System - Automation Test Suite
 
-## Project Overview
-This project demonstrates automated testing for an industrial monitoring dashboard, inspired by my 13 years of experience in the steel industry (Isfahan Steel Company). 
+## Project Description
+This repository contains an automated functional test suite for a web-based industrial monitoring dashboard. The project simulates a real-world scenario where sensor data (like temperature and pressure) must be monitored, and safety alerts must be validated automatically.
 
-The goal is to ensure that safety-critical systems, such as furnace temperature monitors, correctly display alarms when parameters exceed safety thresholds.
+## Purpose
+The main goal is to ensure that the monitoring software correctly identifies critical system states and triggers the appropriate UI alerts (e.g., color changes and status updates) when safety thresholds are exceeded.
 
-## Technical Stack
-* **Language:** Python
-* **Testing Framework:** PyTest
-* **Automation Tool:** Selenium WebDriver
-* **Design Pattern:** Functional Testing
+## Tech Stack
+* **Language:** Python 3.x
+* **Framework:** PyTest
+* **Tool:** Selenium WebDriver
+* **Architecture:** Functional Testing with Automated Assertions
 
-## How it Works
-The test script `test_industrial_dashboard.py` performs the following steps:
-1. Launches a headless Chrome browser.
-2. Loads the monitoring dashboard.
-3. Validates that the temperature (1050°C) is correctly displayed.
-4. Verifies that the status indicator shows **"Critical"**.
-5. Confirms that the UI element has the correct CSS class (`text-danger`) for visual alerting.
+## Test Scenarios Covered
+1. **Dashboard Loading:** Verifies the monitoring page opens correctly.
+2. **Threshold Validation:** Checks if specific temperature values are displayed accurately.
+3. **Alarm Triggering:** Validates that the "Critical" status and red alert CSS classes are applied when the temperature exceeds 1000°C.
 
-## How to Run
-1. Install dependencies:
+## Installation & Execution
+1. Clone the repository.
+2. Install required packages:
    ```bash
    pip install -r requirements.txt
